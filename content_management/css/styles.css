@@ -1,0 +1,136 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #16293d;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+nav a:hover {
+    text-decoration: none;
+    background-color: #2a7dea;
+    border-radius: 5px;
+}
+
+.container {
+    margin: 20px;
+}
+
+button, input[type="submit"] {
+    background-color: #16293d;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover, input[type="submit"]:hover {
+    background-color: #16293d;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.folder, .file {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 10px;
+    margin-bottom: 5px;
+    border: 1px solid #ddd;
+}
+
+.folder .details, .file .details {
+    display: flex;
+    align-items: center;
+}
+
+.folder .details i, .file .details i {
+    margin-right: 10px;
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+}
+
+.actions button {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.actions button:hover {
+    background-color: #0056b3;
+}
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .login-container {
+        padding: 15px;
+    }
+
+    .login-form input[type="text"],
+    .login-form input[type="password"] {
+        padding: 8px;
+    }
+
+    .login-form input[type="submit"] {
+        padding: 8px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-container {
+        padding: 10px;
+    }
+
+    .login-form input[type="text"],
+    .login-form input[type="password"] {
+        padding: 6px;
+    }
+
+    .login-form input[type="submit"] {
+        padding: 6px;
+        font-size: 12px;
+    }
+}
