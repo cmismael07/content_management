@@ -3,6 +3,8 @@
 <?php
 include 'db.php';
 session_start();
+$success_message = "";
+$error_message = "";
 
 if (!isset($_SESSION['user_id'])) {
     header("Location: login.php");
@@ -16,9 +18,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $sql = "INSERT INTO folders (name, user_id, last_modified, modified_by) VALUES ('$folder_name', '$user_id', NOW(), '$user_id')";
     
     if ($conn->query($sql) === TRUE) {
-        echo "Carpeta creada exitosamente";
+        $success_message = "Carpeta creada exitosamente";
     } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
+        $error_message =  "Error: " . $sql . "<br>" . $conn->error;
     }
 }
 ?>

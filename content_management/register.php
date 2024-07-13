@@ -1,6 +1,8 @@
 <?php
 include 'db.php';
 session_start();
+$success_message = "";
+$error_message = "";
 
 if ($_SESSION['role'] != 'admin' && $_SESSION['role'] != 'admin_cliente') {
     header("Location: login.php");
@@ -15,9 +17,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $sql = "INSERT INTO users (username, password, role) VALUES ('$username', '$password', '$role')";
     
     if ($conn->query($sql) === TRUE) {
-        echo "Nuevo usuario creado exitosamente";
+        $success_message = "Nuevo usuario creado exitosamente";
     } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
+        $error_message = "Error: " . $sql . "<br>" . $conn->error;
     }
 }
 ?>

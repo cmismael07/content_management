@@ -58,7 +58,7 @@ $role = $_SESSION['role'];
             $sql_files = "SELECT files.*, users.username AS modified_by FROM files JOIN users ON files.modified_by = users.id WHERE files.folder_id = '$folder_id'";
             $result_files = $conn->query($sql_files);
 
-            if ($result_files->num_rows > 0) {
+           /* if ($result_files->num_rows > 0) {
                 while ($file = $result_files->fetch_assoc()) {
                     echo "<div class='file'>";
                     echo "<div class='details'>";
@@ -73,7 +73,7 @@ $role = $_SESSION['role'];
                 }
             } else {
                 echo "<p>No hay archivos en esta carpeta.</p>";
-            }
+            }*/
         }
     } else {
         echo "<p>No se encontraron carpetas.</p>";
