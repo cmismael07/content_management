@@ -1,0 +1,29 @@
+/* Estilos para la gestión de carpetas */
+.folder-management .folder, .folder-management .file {
+    padding: 10px;
+    margin: 5px 0;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    display: inline-block; /* Para que se muestren en fila */
+}
+
+.folder-management .folder {
+    font-weight: bold;
+    background-color: #e0e0e0;
+}
+
+.folder-management .folder-contents {
+    display: none;
+    padding-left: 20px;
+}
+
+.folder-management .folder.open + .folder-contents {
+    display: block;
+}
+
+.folder-management .file {
+    background-color: #fff;
+    display: block; /* Para que se muestren uno debajo del otro */
+}

@@ -29,6 +29,22 @@ nav a:hover {
 .container {
     margin: 20px;
 }
+/* Asegúrate de tener estilos adecuados para los botones */
+button {
+    padding: 10px 20px;
+    margin: 10px 5px;
+    font-size: 16px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:active {
+    background-color: #004494;
+}
+
 
 button, input[type="submit"] {
     background-color: #16293d;
@@ -134,3 +150,5 @@ th {
         font-size: 12px;
     }
 }
+
+
